@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    CS50 Finance
+{% endblock %}
+
+{% block main %}
+    <div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+                {%for item in items %}
+                    <tr>
+                        <td>{{item.symbol}}</td><td> {{item.name}}</td>
+                        <td> {{item.shares}}</td>
+                        <td> <font color=
+                                        {% if item.trend=="▲" %}green{%endif%}
+                                        {% if item.trend=="▼" %}red{%endif%}
+                                        {% if item.trend=="●" %}black{%endif%}>{{item.trend}}</font>
+                            {{'%0.2f' %item.price}}$</td>
+                        <td>{{'%0.2f' %(item.price*item.shares)}}$</td>
+                    </tr>
+                {%endfor %}
+                
+        </thead>
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Sell Value</th>
+            </tr>
+               <td></td><td></td><td></td><td></td><td>{{'%0.2f' %sell_value}}$</td>
+        </thead>
+         <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Cash</th>
+            </tr>
+               <td></td><td></td><td></td><td></td><td>{{'%0.2f' %cash}}$</td>
+        </thead>
+        <form action="{{ url_for('index') }}" method="post">
+        <fieldset>
+            <div align=right>
+                <button class="btn btn-default" type="refresh">Refresh</button>
+            </div>
+        </fieldset>
+    </form>
+        <tbody>
+    </div>
+    
+{% endblock %}

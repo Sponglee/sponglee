@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   PXL wars
+{% endblock %}
+
+{% block main %}
+
+<div id="outer">
+        <div id="inner">
+            <div class="grid">
+                {% for item in items %}
+                <div  id="{{item.id}}" class="tile" style="background:{{item.color}}"
+                onmouseenter="mouse_i(event)" onmouseleave="mouse_o(event)"></div>
+                {%endfor%}
+            </div>
+        </div>
+</div>
+
+{% endblock %}

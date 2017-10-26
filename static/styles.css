@@ -1,0 +1,206 @@
+.container
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* colors for navbar */
+.navbar-default .navbar-brand .blue
+{
+    color: #537fbe;
+}
+.navbar-default .navbar-brand .red
+{
+    color: #ea433b;
+}
+.navbar-default .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+.navbar-default .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+main td
+{
+    /* left-align tables' cells */
+    text-align: left;
+}
+
+
+
+/* main window options */
+
+
+#outer{
+    width:100%;
+
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+
+    /* Safari and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+
+    /* W3C */
+    display:box;
+    box-pack:center;
+    box-align:center;
+}
+#inner{
+    width:75%;
+}
+
+.grid {
+    top: 50%;
+    left: 50%;
+    width: 105%+20px;
+    height: 105%+20px;
+     	/* initial ratio of 1:1*/
+}
+
+
+.grid div {
+    width: 1%;
+    height: 10%;
+    outline: 1px solid;
+    float: left;
+    background-color: lightblue;
+}
+
+.tile{
+  outline: 1% solid;
+	position: relative;
+	width: 10%;		/* desired width */
+}
+.tile:before{
+	content: "";
+	display: block;
+	 outline: 1px solid;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+
+
+/*
+/*
+/* REGISTER.HTML COLORS:
+/*
+/*
+*/
+
+input {
+  display: none;
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.button span {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  background: #eeeeee;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: ease .3s;
+}
+
+.button span:hover {
+  padding: 10px;
+}
+
+.orange .button span {
+  background: #FF5722;
+}
+
+.amber .button span {
+  background: #FFC107;
+}
+
+.lime .button span {
+  background: #8BC34A;
+}
+
+.teal .button span {
+  background: #009688;
+}
+
+.blue .button span {
+  background: #2196F3;
+}
+
+.indigo .button span {
+  background: #3F51B5;
+}
+
+.layer {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  /*transition: ease .3s;*/
+  z-index: -1;
+}
+
+.orange input:checked ~ .layer {
+  background: #F4511E;
+}
+
+.amber input:checked ~ .layer {
+  background: #FFB300;
+}
+
+.lime input:checked ~ .layer {
+  background: #7CB342;
+}
+
+.teal input:checked ~ .layer {
+  background: #00897B;
+}
+
+.blue input:checked ~ .layer {
+  background: #1E88E5;
+}
+
+.indigo input:checked ~ .layer {
+  background: #3949AB;
+}
